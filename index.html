@@ -9,27 +9,15 @@
 </head>
 
 <body>
-    <header>
-        <a id="leaderboards">Leaderboards</a>
-        <div id="timer"></div>
-     </header>
-     
-     <main>
-        <div class="content" id="quiz">
-            <h1>JavaScript Quiz Challenge</h1>
-            <div class="quiz-rules">
-                <p>Welcome! This quiz has a total of 5 questions and you MUST answer all questions within 90 seconds.</p>
-                <h3><b>The rules are simple:</b></h3>
-                <ol>
-                    <li>The time left over after completing the quiz will be your score.</li>
-                    <li>Every time you select a wrong answer, 10 seconds will be deducted from the total time given (90 seconds). </li>
-                    <li>If you answer all the questions or the timer reaches 0, the game will be over and you will be able to write your initials at the end to save your score to the leaderboards.</li>
-                </ol>
-                <p><b>Now, if you're ready, press Start down below to begin.</b></p><br>
-                <button id="start-button">Start Quiz</button>
-            </div>
-        </div>
-     </main>
+    <div class="container">
+        <div id="home" class="flex-column flex-center">
+            <h1>JavaScript Quiz</h1>
+            <p>Welcome! This quiz has a total of 5 questions and you MUST answer all questions within 90 seconds. If you get a question wrong, 10 seconds will be deducted from the time.</p>
+            <a href="./game.html" class="btn">Play</a>
+            <a href="./highscores.html" id="highscore-btn" class="btn">Leaderboards</a>
+        </div>   
+    </div>
+
      <script src="./assets/js/script.js"></script>
 </body>
 </html>
