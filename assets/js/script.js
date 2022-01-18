@@ -2,7 +2,6 @@ const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
-const progressBarFull = document.querySelector('#progressBarFull');
 
 let currentQuestion = {}
 let acceptingAnswers = true;
@@ -65,7 +64,7 @@ startGame = () => {
 }
 
 startTimer = () => {
-    var sec = 90;
+    var sec = 60;
     var timer = setInterval(function(){
         document.getElementById('safeTimerDisplay').innerHTML=sec;
         sec--;
