@@ -61,7 +61,19 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     getNewQuestions();
+    startTimer();
 }
+
+startTimer = () => {
+    var sec = 90;
+    var timer = setInterval(function(){
+        document.getElementById('safeTimerDisplay').innerHTML=sec;
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}   
 
 getNewQuestions = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
@@ -72,7 +84,6 @@ getNewQuestions = () => {
 
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
